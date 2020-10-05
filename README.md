@@ -67,3 +67,7 @@ const defaultQuotes = [
 ## Bonus 
 
 Have the main quote at the top randomly pick a quote from the `defaultQuotes` array and display a new random one every 5 seconds. 
+
+## Super Bonus
+
+Made it this far? You are a brave one, indeed. Why don't you show me what you can do by going out and finding an API for quotes and then show fetched quotes from it on the page?
