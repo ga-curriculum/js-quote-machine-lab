@@ -2,12 +2,12 @@ console.log('main.js loaded');
 
 (function(window) {
     const document = window.document;
-    const form = document.getElementById('form-quote');
+    const form = document.querySelector('#form-quote');
     const heroQuote = document.querySelector('.hero blockquote');
     const heroAuthor = document.querySelector('.hero p');
     const quotesContainer = document.querySelector('.quotes');
-    const formQuoteTxt = document.getElementById('quote-txt');
-    const formAuthor = document.getElementById('author');
+    const formQuoteTxt = document.querySelector('#quote-txt');
+    const formAuthor = document.querySelector('#author');
     const defaultQuotes = [
         {
             "quote": "Whether you think you can or think you can’t, you’re right.",
