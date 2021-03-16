@@ -40,9 +40,19 @@ console.log('main.js loaded');
         prepend ? container.prepend(newQuote) : container.appendChild(newQuote);
     }
 
-    for (let quote of defaultQuotes) {
-        addNewQuote(quote.quote, quote.author, quotesContainer, false);
-    }
+    // TO USE QUOTES FROM API
+    fetch('https://type.fit/api/quotes')
+        .then(response => response.json())
+        .then(json => {
+            for (let quote of json) {
+                addNewQuote(quote.text, quote.author, quotesContainer, false);
+            }
+        })
+
+    // TO USE DEFAULT QUOTES
+    // for (let quote of defaultQuotes) {
+    //     addNewQuote(quote.quote, quote.author, quotesContainer, false);
+    // }
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -79,8 +89,5 @@ console.log('main.js loaded');
         heroAuthor.innerText = randomQuote.author;
     }, 5000);
 
-    fetch('https://quotes.rest/qod?language=en')
-        .then(response => response.json())
-        .then(json => console.log(json))
 
 })(window);
