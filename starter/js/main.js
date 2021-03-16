@@ -79,4 +79,8 @@ console.log('main.js loaded');
         heroAuthor.innerText = randomQuote.author;
     }, 5000);
 
+    fetch('https://quotes.rest/qod?language=en')
+        .then(response => response.json())
+        .then(json => console.log(json))
+
 })(window);
